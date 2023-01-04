@@ -40,10 +40,10 @@ export default function SearchBar() {
               alignItems: "center",
             }}
           >
-            <AntDesign 
-            name="clockcircle" 
-            size={11}
-            style={{marginRight: 6,}}
+            <AntDesign
+              name="clockcircle"
+              size={11}
+              style={{ marginRight: 6 }} 
             />
             <Text>Search</Text>
           </View>
