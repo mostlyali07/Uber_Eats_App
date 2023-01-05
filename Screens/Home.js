@@ -3,9 +3,10 @@ import React from "react";
 import HeaderTabs from "../Components/Headertabs";
 import SearchBar from "../Components/SearchBar";
 import Categories from "../Components/Categories";
-import RestaurantItem from "../Components/RestaurantItem";
+import RestaurantItems, { localRestaurant } from "../Components/RestaurantItems";
 
 export default function Home() {
+  const [restaurantData, setrestaurantData] = React.useState(localRestaurant);
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "#fff", padding: 15 }}>
@@ -14,7 +15,7 @@ export default function Home() {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItem />
+        <RestaurantItems restaurantData={restaurantData} />
       </ScrollView>
     </SafeAreaView>
   );
