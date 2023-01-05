@@ -5,6 +5,9 @@ import SearchBar from "../Components/SearchBar";
 import Categories from "../Components/Categories";
 import RestaurantItems, { localRestaurant } from "../Components/RestaurantItems";
 
+
+const YELP_API_KEY = ""
+
 export default function Home() {
   const [restaurantData, setrestaurantData] = React.useState(localRestaurant);
   return (
