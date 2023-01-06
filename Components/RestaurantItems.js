@@ -25,7 +25,7 @@ export const localRestaurant = [
     name: "India's Grill",
     image_url:
       "https://images.unsplash.com/photo-1627924275601-192d69e3529b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHJlc3R1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-    Categories: ["Cafe", "INdian"],
+    Categories: ["Cafe", "Indian"],
     price: "$$",
     reviews: 1114,
     rating: 4.1,
