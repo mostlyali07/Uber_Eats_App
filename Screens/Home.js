@@ -8,7 +8,7 @@ import RestaurantItems, {
 } from "../Components/RestaurantItems";
 
 const YELP_API_KEY =
-  "bdRJutLhFAQJ36t7b89CWjHFBU40Kzjt9wvZzcY-nkgmvTqlNMjZWV1eG7iBQ9R74SyfxRg9LWnBAkZY06BtAZAe4d2dfX-2vuX8a1l5V7foctHfX9UKEyoM5ts3YXYx";
+  "EsYloYqP37HhzSoF3wb9in5RbnwXpK-1qpguSRM-i8kDe7VYSEUe93lf3TLbtPeumha-vom1J4Ob9lABzH9a6JOV9I0Vw1_oqj84Fhm7H6Cn6LgWxXNPJ7iGLsi7Y3Yx";
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurant);
@@ -25,7 +25,7 @@ export default function Home() {
       .then((json) => setRestaurantData(json.businesses));
   };
   useEffect(() => {
-    // getRestaurantsFromYelp();
+    getRestaurantsFromYelp();
   }, []);
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
