@@ -1,5 +1,5 @@
 import { View, SafeAreaView, ScrollView } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderTabs from "../Components/Headertabs";
 import SearchBar from "../Components/SearchBar";
 import Categories from "../Components/Categories";

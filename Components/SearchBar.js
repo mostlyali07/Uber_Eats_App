@@ -8,6 +8,7 @@ export default function SearchBar() {
   return (
     <View style={{ marginTop: 15, flexDirection: "row" }}>
       <GooglePlacesAutocomplete
+        query ={{ key: "AIzaSyDcAIXwXZSydSqchZ6cASWJE35OWG_i7eg" }}
         placeholder="Search..."
         styles={{
           textInput: {
@@ -43,7 +44,7 @@ export default function SearchBar() {
             <AntDesign
               name="clockcircle"
               size={11}
-              style={{ marginRight: 6 }} 
+              style={{ marginRight: 6 }}
             />
             <Text>Search</Text>
           </View>
