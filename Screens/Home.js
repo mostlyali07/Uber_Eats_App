@@ -14,7 +14,7 @@ export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurant);
   const getRestaurantsFromYelp = () => {
     const yelpUrl =
-      "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanDiego";
+      "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanFrancisco";
     const apiOptions = {
       headers: {
         Authorization: `Bearer ${YELP_API_KEY}`,
