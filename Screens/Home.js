@@ -12,9 +12,10 @@ const YELP_API_KEY =
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurant);
+  const [city, setCity] = useState("San Francisco");
   const getRestaurantsFromYelp = () => {
     const yelpUrl =
-      "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanFrancisco";
+      `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
     const apiOptions = {
       headers: {
         Authorization: `Bearer ${YELP_API_KEY}`,
@@ -26,16 +27,16 @@ export default function Home() {
   };
   useEffect(() => {
     getRestaurantsFromYelp();
-  }, []);
+  }, [city]);
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "#fff", padding: 15 }}>
         <HeaderTabs />
-        <SearchBar />
+        <SearchBar cityHandler={setCity} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems restaurantData={restaurantData} />
+        <RestaurantItems restaurantData={restaurantData}/>
       </ScrollView>
     </SafeAreaView>
   );
